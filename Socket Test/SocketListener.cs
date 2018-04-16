@@ -121,5 +121,18 @@ namespace SocketServer
                 Console.WriteLine($"Socket could not be shutdown: {ex.Message}");
             }
         }
+
+        public Latte MakeLatte(bool withCream = true)
+        {
+            return new Latte()
+            {
+                WithCream = withCream
+            };
+        }
+    }
+
+    public class Latte
+    {
+        public bool WithCream { get; set; }
     }
 }
